@@ -6,18 +6,19 @@ import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 export default function Header(){
     return(
         <header>
+        
         <Navbar sticky='top' collapseOnSelect expand="md" bg='dark' variant='dark'>
             <Container>
                 <Navbar.Brand>
-                    <NavLink href='/'><img src={logo} className="App-logo" alt="logo" />Test</NavLink>
+                    <NavLink href='/' style={{display:'flex', alignItems:'center'}}><span className='logo-text'>Test</span><img src={logo} className="App-logo" alt="logo"/></NavLink>
                 </Navbar.Brand>
             
-            <NavbarToggle aria-controls='responsive-navbar-nav' />
-            <NavbarCollapse id='responsive-navbar-nav'>
-                <Nav className='me-auto'>
-                    <NavLink href='/specialties'>Specialties</NavLink>
-                </Nav>
-            </NavbarCollapse>
+                <NavbarToggle aria-controls='responsive-navbar-nav' />
+                <NavbarCollapse id='responsive-navbar-nav'>
+                    <Nav className='me-auto'>
+                        <NavLink href='/specialties' className='fs-3'>Specialties</NavLink>
+                    </Nav>
+                </NavbarCollapse>
             </Container>
         </Navbar>
         </header>
