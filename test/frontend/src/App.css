@@ -10,12 +10,26 @@ header, footer{
 }
 main{
   flex-grow: 1;
-  width: 95%;
+  width: 100%;
+  position: relative;
+}
+.carousel{
+  position: absolute !important;
+  left: 0px;
+  top: 0px;
+  opacity: 0.5 !important;
+  z-index: -5;
+  
+}
+.carousel h3, .carousel p{
+  color: black !important;
 }
 .container{
 margin: 0px !important;
 }
-
+.accordion-collapse{
+  background-color: whitesmoke !important;
+}
 .App-logo {
   height: 7vmin;
   pointer-events: none;

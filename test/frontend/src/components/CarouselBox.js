@@ -1,29 +1,42 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
+import gif1 from '../assets/giphy (1).gif'
+import gif2 from '../assets/giphy (2).gif'
+import gif3 from '../assets/giphy (3).gif'
+import gif4 from '../assets/giphy.gif'
 
-const fs = require('fs');
-const path = require('path');
-const directory = './';
 export default function CarouselBox(){
-    let filesDir = []
-    fs.readdir(directory, (err, files) => {
-        files.forEach(file => {
-          // get the details of the file 
-          let fileDetails = fs.lstatSync(path.resolve(directory, file));
-          // check if the file is directory 
-          if (!fileDetails.isDirectory()) {
-            filesDir.push(file)
-          }
-        });
-      })
-    // use readdir method to read the files of the direcoty 
-    
+
     return(
-        
-    //    <Carousel>
-    //     filenames.map((filenames) =>{
-            filesDir.map((element) =>{})
-    //     })
-    //    </Carousel>
+        <Carousel className='w-100'>
+          <Carousel.Item>
+            <img className='d-block w-100' height={800} src={gif1} alt='aaa'/>
+            <Carousel.Caption>
+              <h3>GIF</h3>
+              <p> LOREM</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className='d-block w-100' height={800} src={gif2} alt='aaa'/>
+            <Carousel.Caption>
+              <h3>GIF</h3>
+              <p> LOREM</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className='d-block w-100' height={800} src={gif3} alt='aaa'/>
+            <Carousel.Caption>
+              <h3>GIF</h3>
+              <p> LOREM</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className='d-block w-100' height={800} src={gif4} alt='aaa'/>
+            <Carousel.Caption>
+              <h3>GIF</h3>
+              <p> LOREM</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
     )
 }
