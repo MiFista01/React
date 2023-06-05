@@ -5,40 +5,49 @@ body #root{
   flex-direction: column !important;
   justify-content: space-between !important;
   align-items: center;
-  background-color: rgba(54, 94, 59, 1);
+  background-color: rgb(17, 17, 17);
 }
 header{
-  border-radius: 0px 0px 20px 20px;
-  overflow: hidden;
-}
-header, footer{
-  width: 100%;
-}
-main{
-  flex-grow: 1;
-  position: relative;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  background-color: white;
 }
 
-.accordion-collapse{
-  background-color: whitesmoke !important;
-}
-/* .App-logo {
-  height: 7vmin;
-  pointer-events: none;
-  width: 7vmin;
-  object-fit: cover;
-} */
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 10s linear;
-  }
-}
-
-@keyframes App-logo-spin {
+@keyframes homeImg-spin {
   from {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
   to {
     transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
-} */
+} 
+.white{
+  color: white;
+}
+.to-row{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.ft-large{
+  font-size: 5.5vmin;
+}
+.ft-big{
+  font-size: 4.5vmin;
+}
+.ft-middle{
+  font-size: 4vmin;
+}
+.element{
+  height: 100vh;
+  width: 100%;
+}
+.homeImg{
+  height: 90vmin;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .homeImg {
+    animation: homeImg-spin infinite 10s linear;
+  }
+}

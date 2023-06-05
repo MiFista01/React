@@ -1,0 +1,13 @@
+@media (max-width: 575.98px){
+    header{
+        justify-content: end !important;
+    }
+    .first{
+        flex-direction: column;
+        height: auto !important;
+        padding-top: 2vh;
+    }
+    .first p{
+        width: 100%;
+    }
+}
