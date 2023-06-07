@@ -1,29 +1,45 @@
 import React from 'react'
-import { Accordion, Col, Container, Nav, NavLink, Navbar, Row } from 'react-bootstrap'
-import programsList from '../data/program.json';
+import { Accordion, Col, Container, ListGroup, ListGroupItem, Nav, NavLink, Navbar, Row } from 'react-bootstrap'
+import parse from 'html-react-parser'
 
 
-export default function AccordingBox(){
+let key = 0
+export default function AccordingBox({key, header, text}){
+    let textResult = [];
+    if(typeof text[0] === 'string'){
+        textResult = text[0]
+    }else{
+        for(let i of text){
+            textResult.push(getList(i))
+        }
+    }
+    const isAccordionItemActive = false;
     return(
-        <div className='mt-5 w-100'>
-            <Row>
-                <Col md={{span: 7, offset: 2}}>
-                    <h2>
-                        According Box
-                    </h2>
-                    <Accordion>
-                        {programsList.map((data) => (
-                          
-                            <Accordion.Item eventKey={data.id} key={data.id}>
-                                <Accordion.Header>
-                                    {data.name}#{data.id}
-                                </Accordion.Header>
-                                <Accordion.Body>{data.description}</Accordion.Body>
-                            </Accordion.Item>
-                        ))}
-                    </Accordion>
-                </Col>
-            </Row>
-        </div>
+        <Accordion>
+            <Accordion.Item eventKey={key} key={key} active={isAccordionItemActive} className='expanded'>
+                <Accordion.Header>
+                    {header}
+                </Accordion.Header>
+                <Accordion.Body>{textResult}</Accordion.Body>
+                </Accordion.Item>
+        </Accordion>
     )
+}
+function getList(array){
+    let header = array.slice(0,1);
+    let arrayText = array.slice(1,-1)
+    let text =  <>
+        <h5>{header}</h5>
+        <ul>
+        {arrayText.map((data) => (
+            
+                <li>
+                    {data}
+                </li>
+            
+        ))}
+    </ul>
+    </>
+    console.log(header)
+    return text;
 }
