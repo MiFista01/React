@@ -1,41 +1,39 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
-import gif1 from '../assets/giphy (1).gif'
-import gif2 from '../assets/giphy (2).gif'
-import gif3 from '../assets/giphy (3).gif'
-import gif4 from '../assets/giphy.gif'
+import p1 from '../assets/carousel/1.jpeg'
+import p2 from '../assets/carousel/2.jpeg'
+import p3 from '../assets/carousel/3.jpeg'
+import p4 from '../assets/carousel/4.jpg'
+import p5 from '../assets/carousel/5.jpeg'
+import p6 from '../assets/carousel/6.jpeg'
+import p7 from '../assets/carousel/7.jpeg'
+
+
 
 export default function CarouselBox(){
 
     return(
-        <Carousel className='w-100 backGround'>
-          <Carousel.Item>
-            <img className='d-block w-100' height={800} src={gif1} alt='aaa'/>
-            <Carousel.Caption>
-              <h3>GIF</h3>
-              <p> LOREM</p>
-            </Carousel.Caption>
+        <Carousel className='w-100 backGround' interval={3000} pause={false}>
+          <Carousel.Item className='size-carousel'>
+            <img className='d-block w-100' src={p1} alt='aaa'/>
           </Carousel.Item>
-          <Carousel.Item>
-            <img className='d-block w-100' height={800} src={gif2} alt='aaa'/>
-            <Carousel.Caption>
-              <h3>GIF</h3>
-              <p> LOREM</p>
-            </Carousel.Caption>
+          <Carousel.Item className='size-carousel'>
+            <img className='d-block w-100' src={p2} alt='aaa'/>
           </Carousel.Item>
-          <Carousel.Item>
-            <img className='d-block w-100' height={800} src={gif3} alt='aaa'/>
-            <Carousel.Caption>
-              <h3>GIF</h3>
-              <p> LOREM</p>
-            </Carousel.Caption>
+          <Carousel.Item className='size-carousel'>
+            <img className='d-block w-100' src={p3} alt='aaa'/>
           </Carousel.Item>
-          <Carousel.Item>
-            <img className='d-block w-100' height={800} src={gif4} alt='aaa'/>
-            <Carousel.Caption>
-              <h3>GIF</h3>
-              <p> LOREM</p>
-            </Carousel.Caption>
+          <Carousel.Item className='size-carousel'>
+            <img className='d-block w-100' src={p4} alt='aaa'/>
+          </Carousel.Item>
+          <Carousel.Item className='size-carousel'>
+            <img className='d-block w-100' src={p5} alt='aaa'/>
+          </Carousel.Item>
+          <Carousel.Item className='size-carousel'>
+            <img className='d-block w-100' src={p6} alt='aaa'/>
+          </Carousel.Item>
+          <Carousel.Item className='size-carousel'>
+            <img className='d-block w-100' src={p7} alt='aaa'/>
           </Carousel.Item>
         </Carousel>
     )

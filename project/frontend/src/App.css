@@ -22,6 +22,9 @@ header{
     transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 } 
+section{
+  position: relative;
+}
 .white{
   color: white;
 }
@@ -45,6 +48,19 @@ header{
 }
 .homeImg{
   height: 90vmin;
+}
+.size-carousel{
+  height: 66vmin !important;
+  width: 100vmin !important;
+}
+.carousel-item img {
+  object-fit: cover;
+}
+.hand{
+  position: absolute;
+  left: 30%; /* Измените значение в зависимости от положения руки на изображении */
+  top: 50%; /* Измените значение в зависимости от положения руки на изображении */
+  transform: translate(-50%, -50%);
 }
 @media (prefers-reduced-motion: no-preference) {
   .homeImg {
