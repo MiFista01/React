@@ -17,7 +17,7 @@ export default function Header({homeClick, aboutClick, advantagesClick, galleryC
                         <Nav.Link onClick={aboutClick}><h2>About</h2></Nav.Link>
                         <Nav.Link onClick={advantagesClick}><h2>Advantages</h2></Nav.Link>
                         <Nav.Link onClick={galleryClick}><h2>Gallery</h2></Nav.Link>
-                        <Nav.Link onClick={signUpClick}><h2>SignUp</h2></Nav.Link>
+                        <Nav.Link onClick={signUpClick}><h2>Form</h2></Nav.Link>
                     </Nav>
                 </NavbarCollapse>
             </Container>

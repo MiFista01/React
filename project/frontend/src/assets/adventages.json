@@ -40,7 +40,7 @@
     ],
     [
         {
-            "key": 1,
+            "key": 4,
             "header": "College curriculum",
             "text": [
                 [
@@ -61,7 +61,7 @@
             ]
         },
         {
-            "key": 2,
+            "key": 5,
             "header": "Personal characteristics",
             "text": [
                 [
@@ -77,7 +77,7 @@
             ]
         },
         {
-            "key": 3,
+            "key": 6,
             "header": "Additional features",
             "text": [
                 [

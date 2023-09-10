@@ -1,9 +1,7 @@
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from './components/Header';
 import Content from './components/Content';
-import Footer from './components/Footer';
 import { useRef } from 'react';
 function App() {
   const HomeRef = useRef();
@@ -34,11 +32,12 @@ function App() {
       })
   }
   const refs = [HomeRef, AboutRef,AdvantagesRef, GalleryRef, SignUpRef,]
+  const clicks = [homeClick, aboutClick, advantagesClick, galleryClick, signUpClick]
   return (
     <>
-      <Header homeClick={homeClick} aboutClick={aboutClick} advantagesClick={advantagesClick} galleryClick={galleryClick} signUpClick={signUpClick} />
-      <main className='w-100'><Content refs={refs} /></main>
-      <Footer />
+      
+      <main className='w-100'><Content refs={refs} clicks={clicks} /></main>
+      
     </>
   );
 }

@@ -12,6 +12,8 @@ header{
   display: flex;
   justify-content: center;
   background-color: white;
+  position: fixed;
+  z-index: 10;
 }
 
 @keyframes homeImg-spin {
@@ -34,36 +36,143 @@ section{
   align-items: center;
 }
 .ft-large{
-  font-size: 5.5vmin;
+  font-size: 5.5vmin !important;
 }
 .ft-big{
-  font-size: 4.5vmin;
+  font-size: 4.5vmin !important;
 }
 .ft-middle{
-  font-size: 4vmin;
+  font-size: 4vmin !important;
+}
+.ft-small{
+  font-size: 3vmin !important;
+}
+.ft-tiny{
+  font-size: 2vmin !important;
+}
+.ft-very-tiny{
+  font-size: 1.5vmin !important;
 }
 .element{
   height: 100vh;
   width: 100%;
+  background-position:center;
+  background-size:cover;
+  overflow: hidden;
 }
 .homeImg{
   height: 90vmin;
 }
-.size-carousel{
-  height: 66vmin !important;
-  width: 100vmin !important;
-}
+
 .carousel-item img {
   object-fit: cover;
 }
-.hand{
+.woman{
   position: absolute;
-  left: 30%; /* Измените значение в зависимости от положения руки на изображении */
-  top: 50%; /* Измените значение в зависимости от положения руки на изображении */
+  position: absolute;
+  bottom: 0%;
+  right: -0.15%;
+  height: 100vh;
+  transform: scale(1.01);
+}
+.slider{
+  position: absolute;
+  top: 50%; /* Новое значение для смещения выше */
+  left: 35%; /* Новое значение для смещения правее */
+  transform: translate(-50%, -50%);
+  width: 60vw;
+}
+.sign{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 70%;
+}
+.sign h1{
+  color: white;
+  width: 100%;
+}
+.sign .data{
+  width: 35%;
+  margin-right: 5%;
+}
+.sign label{
+  color: white;
+  margin-top: 10px;
+}
+.letter{
+  display: flex;
+  justify-content: space-between;
+}
+.ico-ivkhk{
+  position: absolute;
+  right: 1%;
+  bottom: 2%;
+  width: 10%;
+}
+footer{
+  padding: 1% 5%;
+}
+footer ul{
+  list-style: none;
+  padding: 0px;
+}
+footer ul p{
+  margin: 0px;
+  cursor: pointer;
+}
+footer > p, footer > ul, footer > div{
+  margin-right: 4%;
+}
+footer > div p{
+  margin: 0px;
+  margin-right: 20px;
+}
+.admin{
+  background-color: white;
+}
+.admin > div{
+  position: relative;
+  padding: 2%;
+  padding-bottom: 5%;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.admin .date{
+  position: absolute;
+  right: 1%;
+  bottom: 1%;
+}
+.form-check{
+  padding: 0px !important;
+}
+.btn-form{
+  position: absolute;
+  left:50%;
+  bottom: 0%;
+  font-size: 5vmin !important;
   transform: translate(-50%, -50%);
 }
 @media (prefers-reduced-motion: no-preference) {
   .homeImg {
     animation: homeImg-spin infinite 10s linear;
+  }
+}
+@media (max-width: 850px){
+  .slider{
+    /* z-index: 2; */
+    width: 80%;
+  }
+  .element{
+    flex-wrap: wrap;
+  }
+  .home{
+    flex-direction: column;
+  }
+  .home p{
+    width: 80%;
+  }
+  .to-row{
+    justify-content: center;
   }
 }

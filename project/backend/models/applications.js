@@ -1,13 +1,22 @@
 import db from '../connection/database.js'
 import {DataTypes, Model} from 'sequelize'
-class User extends Model{}
-User.init({
+
+class Applications extends Model{}
+Applications.init({
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
-    username: {
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    date: {
+        type: DataTypes.DATEONLY,
+        allowNull: false
+    },
+    phone: {
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -15,22 +24,25 @@ User.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    password: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    salt: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    role:{
+    education: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        defaultValue: 1
+        allowNull: false
+    },
+    message: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    },
+    status: {
+        type: DataTypes.BOOLEAN
     }
 },
 {
     sequelize:db,
-    modelName: 'users'
+    modelName: 'applications'
 })
-export default User 
+export default Applications
+
+// references:{
+//     model: "games",
+//     key:"id"
+// }
